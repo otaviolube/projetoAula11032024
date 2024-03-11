@@ -1,4 +1,4 @@
-# Anotações importantes
+# Anotações importantes :joy:
 
 ## Comandos do Git
 
