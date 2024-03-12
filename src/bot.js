@@ -14,6 +14,16 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
   bot.sendMessage(chatId, resp);
 });
 
+bot.on('photo', async function(msg){
+    const chatId = msg.chat.id;
+    const photoId = msg.photo[msg.photo.length - 1].file_id;
+
+    const photo = await bot.downloadFile(photoId, "./src/imgs");
+
+
+    bot.sendPhoto(chatId, photo, { caption: "Toma aí GOKU"})
+})
+
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
